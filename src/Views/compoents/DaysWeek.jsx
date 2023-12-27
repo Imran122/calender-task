@@ -63,7 +63,7 @@ const DaysWeek = () => {
   }
 
   return (
-    <div className=" mt-8 items-center ml-[165px] flex gap-4 h-[50px] ">
+    <div className=" mt-8 items-center ml-[165px] flex gap-4 h-[50px] md:w-[549px] w-full">
       <h2 className="text-lg font-bold text-text_colour">
         {months[currentDate.getMonth()]} {currentDate.getFullYear()}
       </h2>
