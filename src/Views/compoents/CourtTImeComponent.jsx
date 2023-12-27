@@ -22,8 +22,10 @@ const CourtTimeComponent = () => {
 
   return (
     <div className="ml-2 md:ml-[67px] md:min-w-[1520px] relative">
-     
-        <div className="circles-container z-10 border bottom-2/3 border-b-2 border-red-600 absolute w-[1560px] left-24"></div>
+     <div className=" relative ">
+     <p className="ml-10 absolute top-[300px] text-red-700">10.45</p>
+        <div className="circles-container z-10 border  left-24 bottom-2/3 top-[310px] border-b-2 border-red-600 absolute w-[1560px] "></div>
+     </div>
 
  
       <table className="w-full  h-[870px] border-collapse">
