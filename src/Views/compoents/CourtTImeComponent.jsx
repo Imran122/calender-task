@@ -3,7 +3,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 const CourtTimeComponent = () => {
-  const courts = Array.from({ length: 11 }, (_, index) => index + 1);
+  const courts = Array.from({ length: 12 }, (_, index) => index + 1);
   const hours = Array.from({ length: 17 }, (_, index) => index + 8);
 
   // Example: Events data structure
@@ -67,6 +67,9 @@ const CourtTimeComponent = () => {
                 >
                   <div className="z-10 h-0.5 bg-slate-100 absolute w-full bottom-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
                   
+                 {/*  {index === 5 && (
+                    <div className="z-10 h-0.5 bg-red-500 absolute w-full bottom-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+                  )} */}
                   {getEventInfo(hour, court) && (
                     <div
                       className={`${
@@ -83,17 +86,19 @@ const CourtTimeComponent = () => {
                       }}
                     >
                       <div className="flex flex-col col-span-4 w-full md:text-base text-xs">
-                        <div className=" text-text_normal">
+                        <div className=" text-text_normal font-[12px] text-[12px]">
                           {`${hour < 7 ? "0" : ""}${hour}:00 - ${
                             hour + 1 < 7 ? "0" : ""
                           }${hour + 1}:00`}
                         </div>
-                        <div className=" text-text_normal">
+                        <div className=" text-[#7E93FF] font-bold  text-[14px]">
                           {getEventInfo(hour, court)}
                         </div>
                       </div>
                       <div className="col-span-1 mt-6">
-                        <p>2/3</p>
+                        <p className="text-[#7E93FF] font-bold text-[7px]">
+                          2/3
+                        </p>
                       </div>
                     </div>
                   )}
