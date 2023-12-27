@@ -12,3 +12,8 @@ body{
   --text-normal: rgba(34, 53, 109, 1);
 
 }
+
+.custom-border {
+  border-left: 2px solid;
+  border-image: linear-gradient(to bottom, red 50%, yellow 50%) 1;
+}
