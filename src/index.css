@@ -5,3 +5,9 @@
 body{
   background-color: rgba(136, 154, 182, 0.15);
 }
+
+:root {
+
+  --text-colour: #22356D;
+
+}

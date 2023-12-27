@@ -12,7 +12,7 @@ const CourtTimeComponent = () => {
   };
 
   return (
-    <div className="ml-2 md:ml-[87px] overflow-x-auto">
+    <div className="ml-2 md:ml-[67px] overflow-x-auto">
       <table className="w-full md:min-w-[1520px] border-collapse ">
         <thead>
           <tr className="">

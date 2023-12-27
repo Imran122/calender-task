@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 const DaysWeek = () => {
   //bg-[#889AB6]  bg-opacity-15
   const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -60,26 +61,35 @@ const DaysWeek = () => {
     );
     calendarDays.push(date);
   }
+
   return (
-    <div className=" mt-8 items-center ml-[146px] flex gap-4 ">
-      <h2 className="text-lg font-bold">
+    <div className=" mt-8 items-center ml-[165px] flex gap-4 ">
+      <h2 className="text-lg font-bold text-text_colour">
         {months[currentDate.getMonth()]} {currentDate.getFullYear()}
       </h2>
 
       <div className="flex gap-4">
-        <button onClick={prevSixDays} className="text-lg font-bold">
-          &lt;
+        <button onClick={prevSixDays} className="text-lg font-bold text-text_colour">
+        <IoIosArrowBack />
         </button>
-        <div className="grid grid-cols-6 gap-2">
+        <div className="grid grid-cols-6">
           {daysOfWeek.map((day, index) => (
-            <div key={index} className="text-center font-bold">
+            <div
+              key={index}
+              className={`text-center font-normal text-text_colour rounded-md rounded-b-none px-2 ${
+                calendarDays[index].toDateString() ===
+                currentDate.toDateString()
+                  ? "bg-white"
+                  : ""
+              }`}
+            >
               {day}
             </div>
           ))}
           {calendarDays.map((date) => (
             <div
               key={date.toISOString()}
-              className={`text-center p-2 rounded-full ${
+              className={`text-center text-text_colour font-bold rounded-md rounded-t-none px-2 ${
                 date.toDateString() === currentDate.toDateString()
                   ? "bg-white"
                   : ""
@@ -89,8 +99,8 @@ const DaysWeek = () => {
             </div>
           ))}
         </div>
-        <button onClick={nextSixDays} className="text-lg font-bold">
-          &gt;
+        <button onClick={nextSixDays} className="text-lg font-bold text-text_colour">
+        <IoIosArrowForward />
         </button>
       </div>
     </div>
