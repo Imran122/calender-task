@@ -1,15 +1,14 @@
 
 import './App.css'
+import HomePage from './Views/pages/HomePage'
 
 function App() {
   
 
   return (
-    <>
-      <h1 className="text-green-800 font-bold underline">
-      Hello world!
-    </h1>
-    </>
+    <div >
+    <HomePage></HomePage>
+    </div>
   )
 }
 
