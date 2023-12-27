@@ -8,7 +8,7 @@ const CourtTimeComponent = () => {
 
   // Example: Events data structure
   const events = {
-    "8:00": { court1: "Imran" },
+    "8:00": { court2: "Imran" },
     "9:00": { court3: "John" },
     // Add more events as needed
   };
@@ -61,19 +61,19 @@ const CourtTimeComponent = () => {
               {courts.map((court, index) => (
                 <td
                   key={court}
-                  className={`text-center text-text_normal border border-t-0 border-gray-300 relative bg-[#FFFFFF] ${
+                  className={` text-text_normal border border-t-0 border-gray-300 relative bg-[#FFFFFF] ${
                     index === 0 ? "border-l-0" : ""
                   } ${index === courts.length - 1 ? "border-r-0" : ""}`}
                 >
                   <div className="z-10 h-0.5 bg-slate-100 absolute w-full bottom-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "></div>
+                  
                   {getEventInfo(hour, court) && (
                     <div
                       className={`${
                         getEventInfo(hour, court) === "Imran"
                           ? "custom-border"
                           : ""
-                      } z-50 absolute top-1/2 -translate-y-1/2 md:h-auto custom-event grid md:grid-cols-5 md:justify-between md:items-center w-full h-12 md:px-3 md:py-2 md:gap-2 bg-[#e8eaf0]`}
+                      } z-50  absolute top-1/2 -translate-y-1/2 md:h-16 custom-event grid md:grid-cols-5  w-full h-12 md:py-2  bg-[#e8eaf0]`}
                       style={{
                         borderLeft: `4px solid ${
                           getEventInfo(hour, court) === "Imran"
@@ -92,7 +92,7 @@ const CourtTimeComponent = () => {
                           {getEventInfo(hour, court)}
                         </div>
                       </div>
-                      <div className="col-span-1">
+                      <div className="col-span-1 mt-6">
                         <p>2/3</p>
                       </div>
                     </div>
