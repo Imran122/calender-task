@@ -63,12 +63,12 @@ const DaysWeek = () => {
   }
 
   return (
-    <div className=" mt-8 items-center ml-[165px] flex gap-4 ">
+    <div className=" mt-8 items-center ml-[165px] flex gap-4 h-[50px] ">
       <h2 className="text-lg font-bold text-text_colour">
         {months[currentDate.getMonth()]} {currentDate.getFullYear()}
       </h2>
 
-      <div className="flex gap-4">
+      <div className="flex gap-2">
         <button onClick={prevSixDays} className="text-lg font-bold text-text_colour">
         <IoIosArrowBack />
         </button>

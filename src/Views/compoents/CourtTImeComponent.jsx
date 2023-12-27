@@ -12,29 +12,31 @@ const CourtTimeComponent = () => {
   };
 
   return (
-    <div className="ml-2 md:ml-[67px] overflow-x-auto">
-      <table className="w-full md:min-w-[1520px] border-collapse ">
+    <div className="ml-2 md:ml-[67px] overflow-x-auto ">
+      <table className="w-full md:min-w-[1520px] h-[870px] border-collapse ">
         <thead>
           <tr className="">
             <th className="md:py-8"></th>
             {courts.map((court, index) => (
               <th
                 key={court}
-                className={`text-center font-bold border border-t-0 border-gray-300 bg-[#FFFFFF] ${
-                  index === 0 ? "border-l-0" : ""
-                } ${index === courts.length - 1 ? "border-r-0" : ""}`}
+                className={`text-center  font-bold border border-t-0 border-gray-300 bg-[#FFFFFF]  ${
+                  index === 0 ? "border-l-0 rounded-md" : ""
+                } ${index === courts.length - 1 ? "border-r-0 rounded-md" : ""}`}
               >
-                {index === 0 && (
-                  <span className="text-gray-500">
-                    <IoIosArrowBack />
-                  </span>
-                )}
-                Court {court}
-                {index === courts.length - 1 && (
-                  <span className="text-gray-500">
-                    <IoIosArrowForward />
-                  </span>
-                )}
+                <div className="flex items-center justify-center text-text_normal">
+                  {index === 0 && (
+                    <span className="text-text_normal">
+                      <IoIosArrowBack />
+                    </span>
+                  )}
+                  Court {court}
+                  {index === courts.length - 1 && (
+                    <span className="text-text_normal">
+                      <IoIosArrowForward />
+                    </span>
+                  )}
+                </div>
               </th>
             ))}
           </tr>
@@ -42,11 +44,11 @@ const CourtTimeComponent = () => {
         <tbody>
           {hours.map((hour) => (
             <tr key={hour} className="">
-              <td className="py-4 md:py-8 text-center whitespace-nowrap">{`${hour}:00`}</td>
+              <td className="py-4 md:py-8 text-center text-text_normal whitespace-nowrap">{`${hour}:00`}</td>
               {courts.map((court, index) => (
                 <td
                   key={court}
-                  className={`text-center font-bold border border-t-0 border-gray-300 relative bg-[#FFFFFF] ${
+                  className={`text-center text-text_normal font-bold border border-t-0 border-gray-300 relative bg-[#FFFFFF] ${
                     index === 0 ? "border-l-0" : ""
                   } ${index === courts.length - 1 ? "border-r-0" : ""}`}
                 >

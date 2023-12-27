@@ -11,6 +11,7 @@ export default {
       colors: {
      
         text_colour: "var(--text-colour)",
+        text_normal: "var(--text-normal)",
       },
     },
   },

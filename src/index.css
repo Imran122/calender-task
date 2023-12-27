@@ -9,5 +9,6 @@ body{
 :root {
 
   --text-colour: #22356D;
+  --text-normal: rgba(34, 53, 109, 1);
 
 }
