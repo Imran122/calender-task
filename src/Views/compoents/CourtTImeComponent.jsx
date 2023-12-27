@@ -21,7 +21,11 @@ const CourtTimeComponent = () => {
   };
 
   return (
-    <div className="ml-2 md:ml-[67px] md:min-w-[1520px] ">
+    <div className="ml-2 md:ml-[67px] md:min-w-[1520px] relative">
+     
+        <div className="circles-container z-10 border bottom-2/3 border-b-2 border-red-600 absolute w-[1560px] left-24"></div>
+
+ 
       <table className="w-full  h-[870px] border-collapse">
         <thead>
           <tr className="">
@@ -58,6 +62,7 @@ const CourtTimeComponent = () => {
               <td className="py-4 md:py-8 text-center text-text_normal whitespace-nowrap ">
                 {`${hour < 10 ? "0" : ""}${hour}:00`}
               </td>
+
               {courts.map((court, index) => (
                 <td
                   key={court}
@@ -66,10 +71,7 @@ const CourtTimeComponent = () => {
                   } ${index === courts.length - 1 ? "border-r-0" : ""}`}
                 >
                   <div className="z-10 h-0.5 bg-slate-100 absolute w-full bottom-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                  
-                 {/*  {index === 5 && (
-                    <div className="z-10 h-0.5 bg-red-500 absolute w-full bottom-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                  )} */}
+
                   {getEventInfo(hour, court) && (
                     <div
                       className={`${

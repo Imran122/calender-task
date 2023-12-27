@@ -12,6 +12,34 @@ body{
   --text-normal: rgba(34, 53, 109, 1);
 
 }
+/* styles.css */
+
+
+
+.circles-container::before
+ {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: red;
+  border-radius: 50%;
+  left: -7px;
+  right: 115px;
+  top: -4px;
+  transition: background-color 0.3s ease;
+}
+.circles-container::after {
+  content: "";
+  background: red;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  border-radius: 50%;
+  right: -2px;
+  top: -5px;
+}
+
 
 .custom-border {
   border-left: 2px solid;
